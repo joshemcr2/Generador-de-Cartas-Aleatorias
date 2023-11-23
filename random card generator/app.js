@@ -20,6 +20,15 @@ const deckCards = () => {
   document.querySelector("#topSuit").innerHTML = distribuidas[1];
   document.querySelector("#botSuit").innerHTML = distribuidas[1];
 
+  if (distribuidas[1] === "♦" || distribuidas[1] === "♥") {
+    document.querySelector("#topSuit").classList.add("red-icon");
+    document.querySelector("#botSuit").classList.add("red-icon");
+  } else {
+    document.querySelector("#topSuit").classList.remove("red-icon");
+    document.querySelector("#botSuit").classList.remove("red-icon");
+  }
+
+
   if (mezcla.length === 0) {
     document.querySelector("#numero").innerHTML = "X";
     document.querySelector("#topSuit").innerHTML = "X";
